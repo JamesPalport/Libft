@@ -6,7 +6,7 @@
 #    By: amerrouc <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 15:59:18 by amerrouc          #+#    #+#              #
-#    Updated: 2018/11/22 10:08:50 by amerrouc         ###   ########.fr        #
+#    Updated: 2018/11/22 13:26:45 by amerrouc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,9 +74,11 @@ SRC = ft_strlen.c	\
 	  ft_power.c	\
 	  ft_factorial.c	\
 	  ft_is_prime.c	\
-	  ft_strrev.c
+	  ft_strrev.c	\
+	  get_next_line.c
 
-INC = 
+
+INC = -Iincludes/ 
 
 OBJ = $(SRC:.c=.o)
 
@@ -85,7 +87,7 @@ FLAG = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	gcc $(FLAG) $(SRC) -c
+	gcc $(FLAG) $(INC) $(SRC) -c
 	ar rc $(NAME) $(OBJ)
 
 %.o: %.c
