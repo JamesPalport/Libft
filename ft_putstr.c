@@ -6,7 +6,7 @@
 /*   By: amerrouc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 15:30:35 by amerrouc          #+#    #+#             */
-/*   Updated: 2018/11/13 16:04:27 by amerrouc         ###   ########.fr       */
+/*   Updated: 2019/01/09 13:58:33 by amerrouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,5 @@ void	ft_putstr(char const *s)
 
 	i = 0;
 	if (s)
-		while (s[i])
-			ft_putchar(s[i++]);
+		write(1, s, ft_strlen(s));
 }
