@@ -6,17 +6,18 @@
 /*   By: amerrouc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:58:46 by amerrouc          #+#    #+#             */
-/*   Updated: 2018/11/14 15:25:50 by amerrouc         ###   ########.fr       */
+/*   Updated: 2019/01/10 10:49:05 by amerrouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 
 # define LIBFT_H
+# define BUFF_SIZE 9
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <string.h>
+# include <limits.h>
 
 typedef struct	s_list
 {
@@ -88,5 +89,6 @@ int				ft_power(int nb, int power);
 int				ft_factorial(int nb);
 int				ft_is_prime(int nb);
 char			*ft_strrev(char *str);
+int	get_next_line(const int fd, char **line);
 
 #endif

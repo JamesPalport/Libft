@@ -6,11 +6,11 @@
 /*   By: amerrouc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 14:32:35 by amerrouc          #+#    #+#             */
-/*   Updated: 2018/11/21 14:57:07 by amerrouc         ###   ########.fr       */
+/*   Updated: 2019/01/10 10:26:29 by amerrouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 size_t	ft_lenline(const char *str, size_t size)
 {
