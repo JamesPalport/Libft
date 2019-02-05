@@ -6,7 +6,7 @@
 /*   By: amerrouc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 14:32:35 by amerrouc          #+#    #+#             */
-/*   Updated: 2019/01/10 10:26:29 by amerrouc         ###   ########.fr       */
+/*   Updated: 2019/02/05 10:10:12 by amerrouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,8 @@ int		get_next_line(const int fd, char **line)
 		return (-1);
 	if (rd_cdt(&l, line, &p[fd], &r) == 1)
 	{
-		l = BUFF_SIZE;
-		while (l == BUFF_SIZE && ((r = read(fd, buffer, BUFF_SIZE)) > 0))
+		l = r;
+		while ((int)l == r && ((r = read(fd, buffer, BUFF_SIZE)) > 0))
 		{
 			l = ft_lenline(buffer, r);
 			buffer[r] = '\0';
